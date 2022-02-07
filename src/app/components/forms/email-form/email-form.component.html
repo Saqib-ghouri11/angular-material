@@ -1,0 +1,36 @@
+<div class="mail-container">
+    <form #emailForm (ngSubmit)="onSubmit()" [formGroup]="emailFormGroup" >
+<mat-card class="example-card">
+    <!-- <mat-card-subtitle>Email Composer CABYOUR from ReMBusS Limited</mat-card-subtitle> -->
+    <mat-card-title>Compose Here</mat-card-title>
+
+     
+            <mat-form-field appearance="outline" class="form-field" >
+              <mat-label>To</mat-label>
+              <input matInput placeholder="name@example.com" formControlName="to">
+            </mat-form-field>
+            <br>
+            <mat-form-field appearance="outline" class="form-field" >
+                <mat-label>Subject</mat-label>
+                <input matInput placeholder="" formControlName="subject">
+              </mat-form-field>
+              <br>
+              <mat-form-field appearance="fill" class="form-field" >
+                <mat-label>Your Message Here</mat-label>
+                <textarea matInput formControlName="content"></textarea>
+              </mat-form-field>
+      
+    <mat-divider inset></mat-divider>
+    <mat-card-actions>
+      <button mat-button color="primary" type="submit" [disabled]="emailFormGroup?.invalid">Send</button>
+      <button mat-button color="warn" type="reset">Reset</button>
+    </mat-card-actions>
+
+    <mat-card-footer *ngIf="emailSent">
+      <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+    </mat-card-footer>
+
+  </mat-card>
+</form>
+</div> 
+

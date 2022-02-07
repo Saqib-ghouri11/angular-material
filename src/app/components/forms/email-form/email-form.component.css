@@ -1,0 +1,14 @@
+.example-card {
+    margin: auto;
+    width: 100%;
+  }
+.mail-container{
+    margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+.form-field{
+    width: 100%;
+    margin: auto;
+}
